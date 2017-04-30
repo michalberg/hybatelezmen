@@ -62,7 +62,7 @@ margin-bottom: 20px;}
 	margin-bottom:0;
 	line-height: 2em;}
 
-.footer p a {color:#fff;}	
+.kontakt, .kontakt a {color: #ccc;}
 
 .footer span {color:#e73e0d;}
 
@@ -152,6 +152,8 @@ a.btn {color: #000;}
 
 .pull-right {float;right: }
 
+.table-curved p {margin-top: 10px}
+
 /* === pridejte se === */
 .modal-header, .modal-header h4, .close {
       background-color: #e73e0d;
@@ -167,6 +169,7 @@ a.btn {color: #000;}
   }
 
   .modal-content {color:#000;}
+
 
 
 /* === TABLES === */

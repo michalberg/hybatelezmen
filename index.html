@@ -24,69 +24,21 @@
 <link href="https://fonts.googleapis.com/css?family=Domine|Oswald" rel="stylesheet">
 
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
- 
-<script src="js/tabsplugin.js"></script>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+<script src="js/tabsplugin.js"></script> 
+<script src="js/objekty.js"></script>
 
 <script>
 
+// $("#pridejte").click(function(){
+// $("#myModal").modal();
+// });
+
 $(document).ready(function() {
 
-$('#click1').on("shown.bs.tab", function(){
-  
-    $('html, body').animate({
-        scrollTop: $('#service-one').offset().top - 100
-    }, 'slow');
-  
-  $('#panel3').removeClass('activepanel3');
-  $('#panel2').removeClass('activepanel2');
-  $('#panel1').addClass('activepanel1');
-  });
-
-$('#click2').on("shown.bs.tab", function(){
-  
-    $('html, body').animate({
-        scrollTop: $('#service-two').offset().top - 100
-    }, 'slow');
-
-  $('#panel1').removeClass('activepanel1');
-  $('#panel3').removeClass('activepanel3');
-  $('#panel2').addClass('activepanel2');
-
-  });
-
-
-$('#click3').on("shown.bs.tab", function(){
-  
-    $('html, body').animate({
-        scrollTop: $('#service-three').offset().top - 100
-    }, 'slow');
-
-  $('#panel3').addClass('activepanel3');
-  $('#panel2').removeClass('activepanel2');
-  $('#panel1').removeClass('activepanel1');
-
-  });
-
-$('#click4').on("shown.bs.tab", function(){
-  
-    $('html, body').animate({
-        scrollTop: $('#service-three').offset().top - 100
-    }, 'slow');
-  });
-
-
- $("#pridejte").click(function(){
-        $("#myModal").modal();
-    });
-
-
-$('.nav-tabs-sticky').stickyTabs();
-
-
+ $('.nav-tabs-sticky').stickyTabs();
 });
-
-
-
 
 </script>
 
@@ -178,7 +130,7 @@ $('.nav-tabs-sticky').stickyTabs();
   <li><a href="#skola" data-toggle="tab">Škola</a></li>
   <li><a href="#supermarket" data-toggle="tab">Supermarket</a></li>
   <li><a href="#trznice" data-toggle="tab">Tržnice</a></li>
-  <li><a href="#csr" data-toggle="tab">CSR</a></li>
+
   </ul>
     </div>
   </div>
@@ -203,7 +155,7 @@ $('.nav-tabs-sticky').stickyTabs();
         SOCIÁLNÍ INOVACE</a>
       </h4>
     </div>
-    <div id="collapse1" class="panel-collapse collapse in">
+    <div id="collapse1" class="panel-collapse collapse">
       <div class="panel-body">
         <p>Sociální inovace představují nové a oproti dostupným alternativám lepší řešení – tj. účinnější,
 efektivnější, udržitelnější, spravedlivější –, která naplňují naléhavé sociální (resp.
@@ -324,6 +276,7 @@ pak dochází ke škálování sociální inovace.</div>
   </div>
 
 
+<!-- obsah tabu -->
 
   <div id="banky" class="tab-pane fade in active">
     <div class="row">
@@ -331,35 +284,20 @@ pak dochází ke škálování sociální inovace.</div>
     </div>
             <div class="col-lg-8 col-xs-10 text-obsahu">
   
-  <h1>Banky</h1>
+  <h1>"Banky"</h1>
 
   <p class="perex">
   Organizace poskytující financování pro vznik, rozvoj a šíření společensky prospěšných inovací         
   </p>
 
-<table class="table-curved">
-    <thead>
-<tr class="info"><td class="align-bottom"><h4 class="vlevo">Nadace Friedrich-Ebert-Stiftung</h4> 
-  <a class="btn btn-warning pull-right vpravo" href="http://www.fesprag.cz">www.fesprag.cz</a></td></tr>
-</thead>
-<tbody>
-<tr><td>kontaktní osoba: Martin Voráč</td></tr>
-<tr><td>činnost: vzdělávání</td></tr>
-<tr><td>další informace: podpora demokracie, právního státu, rozvoje aktivní občanské společnosti a utváření sociálně spravedlivé společnosti</td></tr>
-</tbody>
-</table>
 
-<table class="table-curved">
-    <thead>
-      <tr class="info"><td class="align-bottom"><h4 class="vlevo">Nadace Krása pomoci</h4>
-        <a class="btn btn-warning pull-right vpravo" href="http://www.krasapomoci.cz/">www.krasapomoci.cz</a></td></tr>
-    </thead>
-  <tbody>
-<tr><td>kontaktní osoba: Taťána Kuchařová</td></tr>
-<tr><td>činnost: Social inclusion and integration, život ve stáří</td></tr>
-<tr><td>další informace: usiluje o změnu veřejného vnímání seniorů s cílem dosáhnout respektu k životu ve stáří, kontinuální a systematické řešení problematické situace seniorů v České republice a zlepšení kvality jejich života. </td></tr>
-</tbody>
-  </table>
+<div id="holderbanky">
+
+</div>
+
+<script>
+vypisobjekt('banky',$("#holderbanky"));
+</script>
 
             </div>
   
@@ -368,6 +306,396 @@ pak dochází ke škálování sociální inovace.</div>
     </div>
 
 </div>
+
+<!-- /.jeden obsah tabu -->
+
+
+<!-- obsah tabu -->
+
+  <div id="namesti" class="tab-pane fade in active">
+    <div class="row">
+    <div class="col-lg-2 col-xs-1">
+    </div>
+            <div class="col-lg-8 col-xs-10 text-obsahu">
+  
+  <h1>"Náměstí"</h1>
+
+  <p class="perex">
+  Aktéři napomáhající vzniku a rozvoji infrastruktury pro sociální inovátory (ekosystém podpory) a propojování různých aktérů ekosystému mezi sebou
+  </p>
+
+
+<div id="holdernamesti">
+
+</div>
+
+<script>
+vypisobjekt('namesti',$("#holdernamesti"));
+</script>
+
+
+
+</div>
+  
+    <div class="col-lg-2 col-xs-1">
+    </div>
+    </div>
+
+</div>
+
+<!-- /.jeden obsah tabu -->
+
+
+
+
+<!-- obsah tabu -->
+
+  <div id="park" class="tab-pane fade in active">
+    <div class="row">
+    <div class="col-lg-2 col-xs-1">
+    </div>
+            <div class="col-lg-8 col-xs-10 text-obsahu">
+  
+  <h1>"Park"</h1>
+
+  <p class="perex">
+  Organizace, které poskytují sociálním inovátorům příležitosti k setkávání, výměně zkušeností a k obnově duševních sil.
+  </p>
+
+
+<div id="holderpark">
+
+</div>
+
+<script>
+vypisobjekt('park',$("#holderpark"));
+</script>
+
+
+
+</div>
+  
+    <div class="col-lg-2 col-xs-1">
+    </div>
+    </div>
+
+</div>
+
+<!-- /.jeden obsah tabu -->
+
+
+
+
+
+<!-- obsah tabu -->
+
+  <div id="radnice" class="tab-pane fade in active">
+    <div class="row">
+    <div class="col-lg-2 col-xs-1">
+    </div>
+            <div class="col-lg-8 col-xs-10 text-obsahu">
+  
+  <h1>"Radnice"</h1>
+
+  <p class="perex">
+  Symbolizuje aktivity utvářející právní rámec nebo praxi veřejných institucí pro sociální inovátory, disponují veřejnou infrastrukturou a podpůrné prostředky.
+  </p>
+
+<div id="holderradnice">
+
+</div>
+
+<script>
+vypisobjekt('radnice',$("#holderradnice"));
+</script>
+
+
+
+</div>
+  
+    <div class="col-lg-2 col-xs-1">
+    </div>
+    </div>
+
+</div>
+
+<!-- /.jeden obsah tabu -->
+
+
+
+
+
+
+
+
+<!-- obsah tabu -->
+
+  <div id="rozhlas" class="tab-pane fade in active">
+    <div class="row">
+    <div class="col-lg-2 col-xs-1">
+    </div>
+            <div class="col-lg-8 col-xs-10 text-obsahu">
+  
+  <h1>"Rozhlas"</h1>
+
+  <p class="perex">
+  Cílem těchto aktérů je zvyšovat povědomí o sociálních inovátorech a také pomáhat svým know-how s rozvojem schopností sebeprezentace
+  </p>
+
+<div id="holderrozhlas">
+
+</div>
+
+<script>
+vypisobjekt('rozhlas',$("#holderrozhlas"));
+</script>
+
+
+
+
+</div>
+  
+    <div class="col-lg-2 col-xs-1">
+    </div>
+    </div>
+
+</div>
+
+<!-- /.jeden obsah tabu -->
+
+
+
+
+
+<!-- obsah tabu -->
+
+  <div id="nadrazi" class="tab-pane fade in active">
+    <div class="row">
+    <div class="col-lg-2 col-xs-1">
+    </div>
+            <div class="col-lg-8 col-xs-10 text-obsahu">
+  
+  <h1>"Nádraží"</h1>
+
+  <p class="perex">
+  Organizace podporující hybatele společenských změn na cestě za zvyšováním dopadu a posouváním jejich inovačních řešení na novou úroveň
+  </p>
+
+<div id="holdernadrazi">
+
+</div>
+
+<script>
+vypisobjekt('nadrazi',$("#holdernadrazi"));
+</script>
+
+
+
+
+</div>
+  
+    <div class="col-lg-2 col-xs-1">
+    </div>
+    </div>
+
+</div>
+
+<!-- /.jeden obsah tabu -->
+
+
+
+
+
+<!-- obsah tabu -->
+
+  <div id="sklenik" class="tab-pane fade in active">
+    <div class="row">
+    <div class="col-lg-2 col-xs-1">
+    </div>
+            <div class="col-lg-8 col-xs-10 text-obsahu">
+  
+  <h1>"Skleník"</h1>
+
+  <p class="perex">
+  Aktéři zaměření na tvorbu podpůrných mechanismů pro začínající hybatele společenských změn (inkubátory) či všestranně posilující stávající hybatele (akcelerátory). Patří sem také iniciativy, které poskytují sociálním inovátorům příležitost pro další vzdělávání a seberozvoj.
+  </p>
+
+<div id="holdersklenik">
+
+</div>
+
+<script>
+vypisobjekt('sklenik',$("#holdersklenik"));
+</script>
+
+
+
+
+</div>
+  
+    <div class="col-lg-2 col-xs-1">
+    </div>
+    </div>
+
+</div>
+
+<!-- /.jeden obsah tabu -->
+
+
+
+
+
+<!-- obsah tabu -->
+
+  <div id="stadion" class="tab-pane fade in active">
+    <div class="row">
+    <div class="col-lg-2 col-xs-1">
+    </div>
+            <div class="col-lg-8 col-xs-10 text-obsahu">
+  
+  <h1>"Stadion"</h1>
+
+  <p class="perex">
+  Cílem těchto iniciativ je identifikovat a poukázat na nejlepší praxe v oboru prostřednictvím soutěží a ocenění
+  </p>
+
+<div id="holderstadion">
+
+</div>
+
+<script>
+vypisobjekt('stadion',$("#holderstadion"));
+</script>
+
+
+
+</div>
+  
+    <div class="col-lg-2 col-xs-1">
+    </div>
+    </div>
+
+</div>
+
+<!-- /.jeden obsah tabu -->
+
+
+
+
+<!-- obsah tabu -->
+
+  <div id="skola" class="tab-pane fade in active">
+    <div class="row">
+    <div class="col-lg-2 col-xs-1">
+    </div>
+            <div class="col-lg-8 col-xs-10 text-obsahu">
+  
+  <h1>"Škola"</h1>
+
+  <p class="perex">
+  Cílem je představit iniciativy či organizace, zaměřující se na výchovu a vzdělávání nových hybatelů společensky prospěšných změn - sociálních inovací, podnikání a aktivního občanství.
+  </p>
+<div id="holderskola">
+
+</div>
+
+<script>
+vypisobjekt('skola',$("#holderskola"));
+</script>
+
+
+
+
+
+</div>
+  
+    <div class="col-lg-2 col-xs-1">
+    </div>
+    </div>
+
+</div>
+
+<!-- /.jeden obsah tabu -->
+
+
+
+
+
+<!-- obsah tabu -->
+
+  <div id="supermarket" class="tab-pane fade in active">
+    <div class="row">
+    <div class="col-lg-2 col-xs-1">
+    </div>
+            <div class="col-lg-8 col-xs-10 text-obsahu">
+  
+  <h1>"Supermarket"</h1>
+
+  <p class="perex">
+  Platformy zprostředkovávající nabídky podpory, pro bono služeb nebo produktů od soukromého sektoru směrem k sociálním inovátorům.
+  </p>
+<div id="holdersupermarket">
+
+</div>
+
+<script>
+vypisobjekt('supermarket',$("#holdersupermarket"));
+</script>
+
+
+
+
+
+</div>
+  
+    <div class="col-lg-2 col-xs-1">
+    </div>
+    </div>
+
+</div>
+
+<!-- /.jeden obsah tabu -->
+
+
+
+
+
+<!-- obsah tabu -->
+
+  <div id="trznice" class="tab-pane fade in active">
+    <div class="row">
+    <div class="col-lg-2 col-xs-1">
+    </div>
+            <div class="col-lg-8 col-xs-10 text-obsahu">
+  
+  <h1>"Tržnice"</h1>
+
+  <p class="perex">
+  Aktéři (většinou ze soukromého sektoru), kteří nabízí svoje (pro bono) služby či produkty pro sociální inovátory napřímo, např. poskytnutím podpory pro bono právních služeb v rámci CSR.
+  </p>
+<div id="holdertrznice">
+
+</div>
+
+<script>
+vypisobjekt('trznice',$("#holdertrznice"));
+</script>
+
+
+
+
+
+</div>
+  
+    <div class="col-lg-2 col-xs-1">
+    </div>
+    </div>
+
+</div>
+
+<!-- /.jeden obsah tabu -->
+
+
 
 
 
@@ -385,6 +713,7 @@ pak dochází ke škálování sociální inovace.</div>
                   
                     
 <button class="btn-lg" id="pridejte"><a href="https://goo.gl/forms/5kvl2EvlusYZ9XQN2">Chybí váš projekt v naší mapě?</a></button>
+
 
 
 
@@ -435,6 +764,8 @@ pak dochází ke škálování sociální inovace.</div>
      srcset="img/logo-small@2x.png 2x, 
              img/logo-small@3x.png 3x"
      class="logo-small"></a>
+
+<p class="kontakt">Kontakt: <a href="mailto:czech@ashoka.org">czech@ashoka.org</a> | web: <a href="http://ashoka-cee.org/czech/">www.ashoka-cee.org</a></p>
 
                 </div>
             </div>
