@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     
 <meta property="og:title" content="Ashoka Hybatelé změn"/>
-<meta property="og:image" content=""/>  <!-- XXX doplnit-- >
+<meta property="og:image" content=""/>  <!-- XXX doplnit -->
 <meta property="og:site_name" content="Ashoka - Hybatelé změn"/>
 <meta property="og:description" content="Aktéři na mapě sociálních inovátorů v České republice"/>
   
@@ -25,6 +25,8 @@
 
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
  
+<script src="js/tabsplugin.js"></script>
+
 <script>
 
 $(document).ready(function() {
@@ -78,10 +80,12 @@ $('#click4').on("shown.bs.tab", function(){
     });
 
 
+$('.nav-tabs-sticky').stickyTabs();
+
+
 });
 
 
-  
 
 
 </script>
@@ -161,7 +165,7 @@ $('#click4').on("shown.bs.tab", function(){
 
   <div class="row obsah">
     <div class="col-lg-12 bila">
-  <ul class="nav nav-tabs nav-justified navbar-nav">
+  <ul class="nav nav-tabs nav-tabs-sticky nav-justified navbar-nav">
   <li class="active"><a href="#home" data-toggle="tab">Úvod</a></li>
   <li><a data-toggle="tab" href="#banky">Banky</a></li>
   <li><a href="#namesti" data-toggle="tab">Náměstí</a></li>
