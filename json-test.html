@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+<meta property="og:title" content="Ashoka Hybatelé změn"/>
+<meta property="og:image" content=""/>  <!-- XXX doplnit -->
+<meta property="og:site_name" content="Ashoka - Hybatelé změn"/>
+<meta property="og:description" content="Aktéři na mapě sociálních inovátorů v České republice"/>
+  
+
+    <title>Hybatelé změn - Aktéři na mapě sociálních inovátorů v České republice</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- custom css -->
+    <link href="css/custom.css" rel="stylesheet">
+
+
+<link href="https://fonts.googleapis.com/css?family=Domine|Oswald" rel="stylesheet">
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+<script>
+
+var dbRef = new Firebase('https://hybatelezmen.firebaseio.com/');
+
+var objekty;
+
+new Firebase("https://hybatelezmen.firebaseio.com/posts")
+	.orderByChild("kategorie")
+    .equalTo("banky")
+    .once('value', function(snap) {
+    	  objekty = snap.val();
+    	  console.log('objekty: ', objekty);
+    	  console.log('snap val: ', snap.val());
+	
+var $tree = $('<div>', {id: 'items-tree', class: 'col-lg-8 col-lg-offset-2'});
+//Loop all items and create elements for each
+for (var key in objekty) {
+
+var $category = objekty[key].kategorie;
+var $nazev = objekty[key].název;
+var $email = objekty[key].email;
+var $kategorie = objekty[key].kategorie;
+var $nazev = objekty[key].název;
+var $organizace = objekty[key].organizace;
+var $osoba = objekty[key].osoba;
+var $popis = objekty[key].popis;
+var $web = objekty[key].web;
+var $web_zobraz = objekty[key].web_zobraz
+var $zamereni = objekty[key].zamereni;
+
+var $htmltable = "<table class=\"table-curved\">";
+var $htmltable = $htmltable + "<thead><tr class=\"info\"><td class=\"align-bottom\">";
+var $htmltable = $htmltable + "<h4>" + $osoba + "</h4></td><td>";
+var $htmltable = $htmltable + "<h4>" + $organizace + "</h4></td><td>";
+if ($email !== "") {
+$htmltable = $htmltable + "<a class=\"btn btn-warning pull-right vpravo\">" + $email + "</a></td></tr>";
+}
+var $htmltable = $htmltable + "</thead><tbody>"
+
+if ($zamereni !== "") {
+var $htmltable = $htmltable + "<tr><td colspan=\"3\">zaměření: " + $zamereni + "</td></tr>";
+}
+
+if ($popis !== "") {
+var $htmltable = $htmltable + "<tr><td colspan=\"3\">";
+var $htmltable = $htmltable + $popis;
+var $htmltable = $htmltable +"</td></tr>"
+}
+
+var $htmltable = $htmltable + "</tbody></table>";
+
+$tree.append($htmltable);
+$htmltable = "";
+}
+
+
+
+$('#holder').append($tree);
+
+	});
+
+console.log('objekty venku: ', window.objekty);
+
+
+
+
+</script>
+
+</head>
+
+
+
+<body>
+
+<div id="holder">
+
+</div>
+
+
+
+  </body>
+  </html>

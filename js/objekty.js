@@ -57,8 +57,8 @@ switch($kategorie) {
     var $htmltable = $htmltable + "<h4>" + $projekt + "</h4></td><td>";
 	var $htmltable = $htmltable + "<h4>" + $nazev + "</h4></td><td>";
 	if ($web !== "") {
-				if ($web_zobraz !=="") {$web = $web_zobraz};
-					$htmltable = $htmltable + "<a href=\"" + $web + "\" class=\"btn btn-warning pull-right vpravo\">" + $web + "</a>";
+				if ($web_zobraz =="") {$web_zobraz = $web};
+					$htmltable = $htmltable + "<a href=\"" + $web + "\" class=\"btn btn-warning pull-right vpravo\">" + $web_zobraz + "</a>";
 					};
 	var $htmltable = $htmltable + "</td></tr>";
 
@@ -75,8 +75,8 @@ switch($kategorie) {
     var $htmltable = $htmltable + "<h4>" + $projekt + "</h4></td><td>";
 	var $htmltable = $htmltable + "<h4>" + $nazev + "</h4></td><td>";
 	if ($web !== "") {
-				if ($web_zobraz !=="") {$web = $web_zobraz};
-					$htmltable = $htmltable + "<a href=\"" + $web + "\" class=\"btn btn-warning pull-right vpravo\">" + $web + "</a>";
+				if ($web_zobraz =="") {$web_zobraz = $web};
+					$htmltable = $htmltable + "<a href=\"" + $web + "\" class=\"btn btn-warning pull-right vpravo\">" + $web_zobraz + "</a>";
 					};
 	var $htmltable = $htmltable + "</td></tr>";
 		
@@ -92,8 +92,8 @@ switch($kategorie) {
     var $htmltable = $htmltable + "<h4>" + $projekt + "</h4></td><td>";
 	var $htmltable = $htmltable + "<h4>" + $nazev + "</h4></td><td>";
 	if ($web !== "") {
-				if ($web_zobraz !=="") {$web = $web_zobraz};
-					$htmltable = $htmltable + "<a href=\"" + $web + "\" class=\"btn btn-warning pull-right vpravo\">" + $web + "</a>";
+				if ($web_zobraz =="") {$web_zobraz = $web};
+					$htmltable = $htmltable + "<a href=\"" + $web + "\" class=\"btn btn-warning pull-right vpravo\">" + $web_zobraz + "</a>";
 					};
 	var $htmltable = $htmltable + "</td></tr>";
 		
@@ -109,8 +109,8 @@ switch($kategorie) {
 		var $htmltable = $htmltable + "<h4>" + $nazev + "</h4></td><td>";
         var $htmltable = $htmltable + "<h4>" + $osoba + "</h4></td><td>";
 		if ($web !== "") {
-				if ($web_zobraz !=="") {$web = $web_zobraz};
-					$htmltable = $htmltable + "<a href=\"" + $web + "\" class=\"btn btn-warning pull-right vpravo\">" + $web + "</a></td></tr>";
+				if ($web_zobraz =="") {$web_zobraz = $web};
+					$htmltable = $htmltable + "<a href=\"" + $web + "\" class=\"btn btn-warning pull-right vpravo\">" + $web_zobraz + "</a></td></tr>";
 								};
 
 		};
