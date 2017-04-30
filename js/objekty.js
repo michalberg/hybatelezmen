@@ -87,7 +87,7 @@ switch($kategorie) {
 
      case 'stadion':
 
-       //při skleniku se zobrazuje název projektu + organizace + web a ve druhém řádku email
+       //při stadionu se zobrazuje název projektu + název organizace + web a ve druhém řádku email
 
     var $htmltable = $htmltable + "<h4>" + $projekt + "</h4></td><td>";
 	var $htmltable = $htmltable + "<h4>" + $nazev + "</h4></td><td>";
