@@ -30,11 +30,14 @@ var $popis = objekty[key].popis;
 var $web = objekty[key].web;
 var $web_zobraz = objekty[key].web_zobraz
 var $zamereni = objekty[key].zamereni;
+var $pole1 = objekty[key].pole1;
+var $pole2 = objekty[key].pole2;
+var $pole3 = objekty[key].pole3;
+var $pole4 = objekty[key].pole4;
+var $pole5 = objekty[key].pole5;
 
 var $htmltable = "<table class=\"table-curved\">";
 var $htmltable = $htmltable + "<thead><tr class=\"info\"><td class=\"align-bottom\">";
-
-
 
 switch($kategorie) {
 
@@ -121,6 +124,27 @@ var $htmltable = $htmltable + "</thead><tbody>"
 if ($zamereni !== "") {
 var $htmltable = $htmltable + "<tr><td colspan=\"3\">zaměření: " + $zamereni + "</td></tr>";
 }
+
+if ($pole1 !== "") {
+var $htmltable = $htmltable + "<tr><td colspan=\"3\">" + $pole1 + "</td></tr>";
+}
+
+if ($pole2 !== "") {
+var $htmltable = $htmltable + "<tr><td colspan=\"3\">" + $pole2 + "</td></tr>";
+}
+
+if ($pole3 !== "") {
+var $htmltable = $htmltable + "<tr><td colspan=\"3\">" + $pole3 + "</td></tr>";
+}
+
+if ($pole4 !== "") {
+var $htmltable = $htmltable + "<tr><td colspan=\"3\">" + $pole4 + "</td></tr>";
+}
+
+if ($pole5 !== "") {
+var $htmltable = $htmltable + "<tr><td colspan=\"3\">" + $pole5 + "</td></tr>";
+}
+
 
 if ($popis !== "") {
 var $htmltable = $htmltable + "<tr><td colspan=\"3\">";
